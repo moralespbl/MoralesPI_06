@@ -17,7 +17,7 @@ Para poner en marcha el dashboard en tu equipo local, seguí estos pasos:
    *(O modificar la ruta en el código fuente si se movió el archivo).*
 3. **Lanzar el Dashboard:** En la terminal, ejecutar el siguiente comando:
    ```bash
-   streamlit run app_aprender.py
+   streamlit run app_proyecto.py
    ```
 4. **Acceder:** El sistema abrirá automáticamente una pestaña en tu navegador (usualmente en `http://localhost:8501`).
 
