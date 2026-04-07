@@ -39,6 +39,15 @@ El sistema permite cruzar el desempeño con preguntas clave del cuestionario del
 * **`ap20c` (Hacer deportes):** Analizar si la actividad física regular se correlaciona con mejores niveles de desempeño.
 * **`ap35` (Uso de tecnología):** Observar cómo impacta el acceso a dispositivos digitales en los resultados de aprendizaje.
 * **`ap12` (Horas de estudio):** Cuantificar la relación entre el tiempo dedicado fuera del aula y el éxito en las evaluaciones.
+* ** La base de microdatos no esta completa, lo que ocaciona que los graficos no se muestren, aun asi resulta interesante algunos hallazgos.
+
+
+---
+
+### 📸 Vista Previa del Dashboard
+![Interfaz del Dashboard](img/1.png)  
+![Interfaz del Dashboard](img/2.png)  
+![Interfaz del Dashboard](img/3.png)  
 
 ---
 
