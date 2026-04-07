@@ -4,54 +4,46 @@
 
 Este proyecto es una herramienta de Business Intelligence diseñada para procesar y visualizar los microdatos del operativo nacional **Aprender**. Permite cruzar factores sociales con el rendimiento académico real en Matemática y Lengua.
 
-## 🚀 Cómo Ejecutar la Aplicación (Guía Rápida)
+## 📂 Origen de los Datos
+Los microdatos utilizados en este análisis son públicos y fueron obtenidos de la **Secretaría de Educación de la Nación Argentina**:
+- **Fuente:** [Datos Abiertos - Secretaría de Educación](https://www.argentina.gob.ar/educacion/evaluacion-e-informacion-educativa/datos-abiertos-de-la-secretaria-de-educacion)
+- **Procesamiento:** Los archivos originales fueron depurados, filtrados y convertidos a formato **Pickle (.pkl)** para optimizar la performance del dashboard.
 
-Para poner en marcha el dashboard en tu equipo local, seguí estos pasos:
+---
 
-1. **Instalar Dependencias:** Abrir la terminal en la carpeta del proyecto y ejecutar:
+## 🚀 Cómo Ejecutar la Aplicación
+
+1. **Instalar Dependencias:** Abrir la terminal y ejecutar:
    ```bash
    pip install pandas matplotlib streamlit
    ```
-2. **Preparar los Datos:** Asegurarse de que el archivo `df_nacional.pkl` se encuentre en la ruta:
+2. **Configurar el Archivo de Datos:** Asegurarse de que el archivo `df_nacional.pkl` esté en la ruta:
    `df_nacional.pkl`
-   *(O modificar la ruta en el código fuente si se movió el archivo).*
-3. **Lanzar el Dashboard:** En la terminal, ejecutar el siguiente comando:
+3. **Lanzar el Dashboard:** Desde la terminal, ejecutar:
    ```bash
    streamlit run app_proyecto.py
    ```
-4. **Acceder:** El sistema abrirá automáticamente una pestaña en tu navegador (usualmente en `http://localhost:8501`).
 
 ---
 
-## 📖 Manual de Operación de la Planilla
+## 📖 Manual de Operación y Ejemplos
 
-Una vez iniciada la interfaz, el análisis se realiza a través del panel lateral:
+La interfaz permite realizar análisis dinámicos mediante los filtros laterales:
 
-* **Configurar Jurisdicción:** Seleccionar una provincia específica (ej. **Jujuy**) para un análisis local o **"Todas"** para obtener el promedio ponderado nacional.
-* **Elegir Variable de Contexto:** Seleccionar el factor del cuestionario que se desea investigar (ej. "Horas de estudio", "Uso de dispositivos"). El motor de búsqueda filtrará las columnas técnicas automáticamente.
-* **Seleccionar Materia:** Elegir entre Matemática, Lengua o la comparativa de ambas en un mismo gráfico.
-* **Generar Visualización:** Presionar el botón para procesar los datos. El gráfico mostrará barras horizontales donde el ancho de **0.4** garantiza una lectura clara de los niveles de desempeño.
+### 1. Configuración de Filtros
+* **Jurisdicción:** Seleccionar una provincia específica (ej. **Jujuy**) para un análisis local o **"Todas"** para el promedio nacional.
+* **Materia:** Elegir entre Matemática, Lengua o la comparativa de ambas.
 
----
-
-## 📋 Conclusiones Técnicas para el Analista
-* **Normalizar** los datos mediante factores de expansión para que los resultados representen a la población total y no solo a la muestra.
-* **Optimizar** el rendimiento mediante el uso de archivos **Pickle (.pkl)**, permitiendo que el procesamiento de millones de registros sea instantáneo.
-* **Identificar** tendencias: un mayor predominio de colores fríos (azul/verde) indica un desempeño satisfactorio/avanzado en relación a la variable de contexto elegida.
-* **Detectar** inconsistencias en los datos para asegurar que las conclusiones del proyecto de grado se basen en información depurada.
+### 2. Ejemplos de Variables de Contexto
+El sistema permite cruzar el desempeño con preguntas clave del cuestionario del alumno. Algunos ejemplos que podés analizar son:
+* **`ap20c` (Hacer deportes):** Analizar si la actividad física regular se correlaciona con mejores niveles de desempeño.
+* **`ap35` (Uso de tecnología):** Observar cómo impacta el acceso a dispositivos digitales en los resultados de aprendizaje.
+* **`ap12` (Horas de estudio):** Cuantificar la relación entre el tiempo dedicado fuera del aula y el éxito en las evaluaciones.
 
 ---
+
 **Autor:** Pablo - Analista de Datos
 
 ***
 
-### 📝 Resumen para el "About" de GitHub
-Dashboard interactivo para el análisis de microdatos del Operativo Aprender. Implementación de ETL y visualización estadística mediante factores de expansión y segmentación por jurisdicción.
 
-### 💻 Comandos de Subida Final
-1. `git init`
-2. `git add .`
-3. `git commit -m "Versión Final - Guía de ejecución incluida"`
-4. `git branch -M main`
-5. `git remote add origin https://github.com/tu-usuario/nombre-del-repo.git`
-6. `git push -u origin main`
